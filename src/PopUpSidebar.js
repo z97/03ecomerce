@@ -29,17 +29,30 @@ const StyledPopupSidebar = styled(Popup)`
   }
   // use your custom style for ".popup-content"
   &-content {
-    ...;
+    margin: 0;
   }
 `;
 
+const StyledModalMenu = styled.div`
+
+  background-color: white;
+  width: 250px;
+  min-height: 80vh;
+
+  justify-self: flex-start;
+
+`
+
+
 const PopUpMenu = () => (
     <StyledPopupSidebar
-        trigger={<button>ggg</button>}
+        trigger={<div><FaBars/></div>}
         modal
         closeOnDocumentClick
     >
-        <span><Images/> </span>
+        <StyledModalMenu>
+            <h1>hello</h1>
+        </StyledModalMenu>
     </StyledPopupSidebar>
 );
 

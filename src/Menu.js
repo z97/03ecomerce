@@ -1,24 +1,16 @@
 import React, {useState} from 'react';
 import styled from "styled-components";
-import logo from "../src/images/logo.svg"
 import Popup from "reactjs-popup";
-
-
-
-const StyledLogo = styled.img`
-  display: flex;
-  width: 138px;
-`
 
 const StyledMenu = styled.div`
   display: flex;
   flex-wrap: wrap;
   width: 70%;
   justify-content: space-around;
-  @media(min-width: 500px){
-    
-  }
+  flex-direction: ${props => props.direction ? props.direction : "row"};
 `
+
+
 
 const menuItems = ["Collection", "Men", "Woman", "About", "Contact"]
 
@@ -32,12 +24,11 @@ function MenuList (props) {
     )
 }
 
-const Menu = () => {
+const Menu = ({direction}) => {
 
 
     return (
-        <StyledMenu>
-            <StyledLogo src={logo}/>
+        <StyledMenu direction={direction}>
             <MenuList items={menuItems}/>
         </StyledMenu>
     );

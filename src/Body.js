@@ -18,7 +18,6 @@ const StyledBody = styled.div`
 const Body = () => {
     return (
         <StyledBody>
-
             <Gallery/>
             <Text/>
         </StyledBody>

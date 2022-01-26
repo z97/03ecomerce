@@ -7,9 +7,8 @@ import Images from "./Images";
 
 const StyledDiv = styled.div`
   div.barsButton {
-    padding: 20px;
   }
-
+  
   @media screen and (min-width: 600px) {
     div.barsButton {
       display: none;
@@ -29,18 +28,15 @@ const StyledPopupSidebar = styled(Popup)`
   }
   // use your custom style for ".popup-content"
   &-content {
-    margin: 0;
+
   }
 `;
 
 const StyledModalMenu = styled.div`
-
+  padding: 29px;
   background-color: white;
   width: 250px;
   min-height: 80vh;
-
-  justify-self: flex-start;
-
 `
 
 
@@ -51,7 +47,7 @@ const PopUpMenu = () => (
         closeOnDocumentClick
     >
         <StyledModalMenu>
-            <h1>hello</h1>
+            <Menu direction="column" />
         </StyledModalMenu>
     </StyledPopupSidebar>
 );

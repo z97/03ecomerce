@@ -1,26 +1,45 @@
 import React from 'react';
-import logo from "./images/logo.svg";
 import Menu from "./Menu";
-import {Button} from "react-bootstrap";
 import Busket from "./Busket";
 import styled from "styled-components";
-import Navbar from "./Navbar";
+import Avatar from "./Avatar";
+import { FaBars} from 'react-icons/fa';
+import Logo from "./Logo";
 import PopUpSidebar from "./PopUpSidebar";
 
 const StyledHeader = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   padding-bottom: 10px;
   border-bottom: 1px solid #333;
+  @media screen and (min-width: 600px) {
+    div.FaBarsClass {
+      display: none;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    div.MenuClass {
+      display: none;
+    }
+  }
+  div.MenuClass{
+    width: 60%;
+  }
 `
 const Header = () => {
     return (
         <StyledHeader>
-            <PopUpSidebar/>
+            <div className="FaBarsClass">
+                <PopUpSidebar/>
+            </div>
+            <Logo/>
+            <div className="MenuClass">
+                <Menu flex-direction="row"/>
+            </div>
             <Busket/>
+            <Avatar/>
         </StyledHeader>
-
     );
 };
 

@@ -1,6 +1,5 @@
-import React, {useState} from 'react';
+import React from 'react';
 import styled from "styled-components";
-import Popup from "reactjs-popup";
 
 const StyledMenu = styled.div`
   display: flex;

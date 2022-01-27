@@ -18,6 +18,7 @@ const PopUpGalery = () => (
         modal
         closeOnDocumentClick
     >
+
         <span><Images/> </span>
     </StyledPopup>
 );

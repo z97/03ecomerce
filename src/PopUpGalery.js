@@ -12,7 +12,7 @@ const StyledPopup = styled(Popup)`
   }
 `;
 
-const PopUpGalery = () => (
+const PopUpGallery = () => (
     <StyledPopup
         trigger={<button className="button"> Open Modal </button>}
         modal
@@ -23,4 +23,4 @@ const PopUpGalery = () => (
     </StyledPopup>
 );
 
-export default PopUpGalery;
+export default PopUpGallery;

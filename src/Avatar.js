@@ -1,5 +1,5 @@
 import React from 'react';
-import avatar from "./images/image-avatar.png";
+import avatar from "./gallery/images/image-avatar.png";
 import styled from "styled-components";
 
 const StyledImg = styled.img`

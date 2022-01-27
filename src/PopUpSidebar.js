@@ -3,12 +3,13 @@ import Popup from 'reactjs-popup';
 import {FaBars} from 'react-icons/fa';
 import styled from "styled-components";
 import Menu from "./Menu";
-import Images from "./Images";
+import Logo from "./Logo";
 
 const StyledDiv = styled.div`
   div.barsButton {
+    
   }
-  
+
   @media screen and (min-width: 600px) {
     div.barsButton {
       display: none;
@@ -26,6 +27,7 @@ const StyledPopupSidebar = styled(Popup)`
   &-overlay {
     background-color: black;
   }
+
   // use your custom style for ".popup-content"
   &-content {
 
@@ -39,7 +41,6 @@ const StyledModalMenu = styled.div`
   min-height: 80vh;
 `
 
-
 const PopUpMenu = () => (
     <StyledPopupSidebar
         trigger={<div><FaBars/></div>}
@@ -47,7 +48,9 @@ const PopUpMenu = () => (
         closeOnDocumentClick
     >
         <StyledModalMenu>
-            <Menu direction="column" />
+            <Logo/>
+            <br/>
+            <Menu direction="column"/>
         </StyledModalMenu>
     </StyledPopupSidebar>
 );

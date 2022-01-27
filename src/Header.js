@@ -3,7 +3,6 @@ import Menu from "./Menu";
 import Busket from "./Busket";
 import styled from "styled-components";
 import Avatar from "./Avatar";
-import { FaBars} from 'react-icons/fa';
 import Logo from "./Logo";
 import PopUpSidebar from "./PopUpSidebar";
 
@@ -22,10 +21,16 @@ const StyledHeader = styled.div`
     div.MenuClass {
       display: none;
     }
+
+    div.LogoClass {
+      display: none;
+    }
   }
-  div.MenuClass{
+
+  div.MenuClass {
     width: 60%;
   }
+
 `
 const Header = () => {
     return (
@@ -33,7 +38,10 @@ const Header = () => {
             <div className="FaBarsClass">
                 <PopUpSidebar/>
             </div>
-            <Logo/>
+            <div className="LogoClass">
+                <Logo/>
+            </div>
+
             <div className="MenuClass">
                 <Menu flex-direction="row"/>
             </div>

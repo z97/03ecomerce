@@ -4,11 +4,9 @@ import styled from 'styled-components';
 import Images from "./Images";
 
 const StyledPopup = styled(Popup)`
-  // use your custom style for ".popup-overlay"
   &-overlay {
     background-color: black;
   }
-  // use your custom style for ".popup-content"
   &-content {
     ...;
   }

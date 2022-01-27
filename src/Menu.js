@@ -10,8 +10,6 @@ const StyledMenu = styled.div`
   flex-direction: ${props => props.direction ? props.direction : "row"};
 `
 
-
-
 const menuItems = ["Collection", "Men", "Woman", "About", "Contact"]
 
 function MenuList (props) {
@@ -25,8 +23,6 @@ function MenuList (props) {
 }
 
 const Menu = ({direction}) => {
-
-
     return (
         <StyledMenu direction={direction}>
             <MenuList items={menuItems}/>

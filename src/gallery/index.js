@@ -13,9 +13,23 @@ const StyledGallery = styled.div`
   flex-wrap: wrap;
   max-width: 445px;
   max-height: 565px;
-  justify-content: space-between;
+  @media screen and (max-width: 600px){
+    div.SmallImagesClass{
+      display: none;
+    }
+  }
 `
 
+const StyledBigImage = styled.div`
+  
+`
+
+const StyledSmallImages = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 445px
+`
 const smallImages = [smallImage1, smallImage2, smallImage3, smallImage4]
 
 function ImagesList(props) {
@@ -32,8 +46,12 @@ function ImagesList(props) {
 const Index = () => {
     return (
         <StyledGallery>
-            <BigImage image={photoBig}/>
-            <ImagesList images={smallImages}/>
+            <StyledBigImage>
+                <BigImage image={photoBig}/>
+            </StyledBigImage>
+            <StyledSmallImages className="SmallImagesClass">
+                <ImagesList images={smallImages} />
+            </StyledSmallImages>
         </StyledGallery>
     );
 };

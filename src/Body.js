@@ -1,11 +1,7 @@
 import React from 'react';
-import Images from "./Images";
 import styled from "styled-components";
 import Text from "./Text";
-import PopUpGalery from "./PopUpGalery";
 import Gallery from "./gallery/index.js";
-
-
 
 const StyledBody = styled.div`
   display: flex;
@@ -13,7 +9,6 @@ const StyledBody = styled.div`
   flex-wrap: wrap;
   justify-content: space-around;
 `
-
 
 const Body = () => {
     return (
